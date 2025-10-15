@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>MI PRIMERA PAGINA LAZO</title>
+    </head>
+    <body bgcolor="#2784F6" background="images/ute.jpg">
+        
+        <p>
+            <font color="white">
+                Formulario Html5
+            </font>
+        </p>
+
+        <form action="proceso.php" method="post">
+            <fieldset>
+                <legend>
+                    Registro de usuario
+                </legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="nombre">Nombre Completo</label>
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre"
+                                placeholder="Escribe tu nombre">
+
+                        </td>
+                        <td>
+                            <label for="email">Correo electronico</label>
+                            <input 
+                                type="text" 
+                                id="email" 
+                                name="email"
+                                placeholder="Escribe tu Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nombre">Fecha de nacimiento</label>
+                            <input 
+                                type="date" 
+                                id="fecha" 
+                                name="fecha"
+                                >
+
+                        </td>
+                        <td>
+                            <label for="email">Correo electronico</label>
+                            <input 
+                                type="color" 
+                                id="color" 
+                                name="color"
+                                >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="genero">Género</label>
+                            <input 
+                                type="radio" 
+                                id="m" 
+                                name="genero"
+                                value="M"
+                                ><label for="m">Masculino</label>
+                                <input 
+                                type="radio" 
+                                id="f" 
+                                name="genero"
+                                value="F"
+                                ><label for="f">Femenino</label>
+
+                        </td>
+                        <td>
+                            <label for="pais">País</label>
+                            <select id="pais" name="pais">
+                                <option value="ec">Ecuador</option>
+                                <option value="co">Colombia</option>
+                                <option value="me">México</option>
+                                <option value="ve">Venezuela</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="comentario">Comentarios</label>
+                            <textarea 
+                                id="comentarios" 
+                                name="comentarios"
+                                rows="4"
+                                cols="40"
+                            ></textarea>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="acepo" name="acepto" required>
+                            <label for="acepto">Acepto terminos y condicienes</label>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Enviar el formulario">
+                <input type="reset" value="Limpiar">
+                
+
+                
+
+            </fieldset>
+        </form>
+   
+    </body>
+</html>
