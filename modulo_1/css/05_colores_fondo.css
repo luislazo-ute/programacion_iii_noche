@@ -1,0 +1,12 @@
+.fondo{
+    color: red;
+    background-image: url('../html/images/cc.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: aquamarine;
+    opacity: 0.9;
+    padding: 40px;
+    text-align: center;
+    font-size: 20PX;
+}
