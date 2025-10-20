@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Control de Inventarios</title>
+</head>
+<body>
+  <header>
+    <h1>Contacto</h1>
+    <nav>
+      <a href="index.html">Inicio</a> |
+      <a href="acerca.html">Acerca</a> |
+      <a href="productos.html">Productos</a> |
+      <a href="tabla.html">Tabla</a> |
+      <a href="contacto.html">Contacto</a> |      
+      <a href="https://www.ute.edu.ec" target="_blank" rel="noopener">Enlace externo</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulario</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre">Nombre:</label><br>
+          <input id="nombre" name="nombre" type="text" required><br><br>
+
+          <label for="correo">Correo:</label><br>
+          <input id="correo" name="correo" type="email" required><br><br>
+
+          <label for="fecha">Fecha:</label><br>
+          <input id="fecha" name="fecha" type="date"><br><br>
+
+          <label for="tipo">Tipo:</label><br>
+          <select id="tipo" name="tipo">
+            <option value="consulta">Consulta</option>
+            <option value="reporte">Reporte</option>
+          </select><br><br>
+
+          <label><input type="checkbox" name="aviso"> Enviar copia</label><br>
+          <label><input type="radio" name="estado" value="activo"> Activo</label>
+          <label><input type="radio" name="estado" value="inactivo"> Inactivo</label><br><br>
+
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea><br><br>
+
+          <button type="submit">Enviar</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <video width="300" height="150" controls>
+      <source src="videos/CONTROL DE INVENTARIOS.mp4">
+    </video>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Control de Inventarios</p>
+  </footer>
+</body>
+</html>
