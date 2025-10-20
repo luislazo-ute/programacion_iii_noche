@@ -1,0 +1,23 @@
+h1 {
+    color:aqua;
+}
+
+.tipo_clase{
+    color: burlywood;
+}
+
+#selector_id{
+    color: blueviolet;
+}
+
+* {
+    margin: 1;
+}
+
+div p{
+    color: chocolate;
+}
+
+ul > li {
+    color: cornflowerblue;
+}
