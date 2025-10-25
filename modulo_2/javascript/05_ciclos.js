@@ -13,4 +13,8 @@ console.log("La suma es: " , suma);
 let pais="ecuador";
 for (let i = 0; i < pais.length; i++) {
     console.log(pais[i]);
-}               
+}
+
+for (let i=1; i<=5; i++){
+    console.log(`Cuadrado de ${i} es ${i*i}`);
+}
