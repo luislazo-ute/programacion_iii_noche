@@ -47,5 +47,10 @@ export class BasicsController {
         @Param('id') id: string) {
         return this.basicsService.delete(id);
     }
+
+    @Post('licencia-conducir')
+    verificarLicencia(@Body() bodyData: { nombre: string; edad: number }) {
+        return this.basicsService.verificarEdad(bodyData);
+  }
     
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 
 @Injectable()
 export class BasicsService {
@@ -65,4 +65,24 @@ export class BasicsService {
             parameter: parameter
         };
     }
+
+    verificarEdad(data: { nombre: string; edad: number }) {
+    if (data.edad >= 18) {
+      return {
+        nombre: data.nombre,
+        edad: data.edad,
+        puedeConducir: true,
+        mensaje: ' Puede obtener licencia de conducir.'
+      };
+    } else {
+      return {
+        nombre: data.nombre,
+        edad: data.edad,
+        puedeConducir: false,
+        mensaje: ' No puede conducir, es menor de edad.'
+      };
+    }
+  }
+
+   
 }
