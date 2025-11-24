@@ -1,0 +1,35 @@
+console.log('01_hello_typescript_mp cargado');
+
+interface InventoryItem { nombre: string; descripcion?: string; precio?: number; existencia?: number; ubicacion?: string }
+
+const STORAGE_KEY = 'mp_inventory_ts';
+let inventory: InventoryItem[] = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || [];
+
+function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(inventory)); }
+
+function render(){
+  const tbody = document.getElementById('inventoryTable') as HTMLTableSectionElement | null;
+  if(!tbody) return;
+  tbody.innerHTML = '';
+  inventory.forEach((it, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${it.nombre}</td><td>${it.descripcion||''}</td><td>$${Number(it.precio||0).toFixed(2)}</td><td>${it.existencia||0}</td><td>${it.ubicacion||''}</td><td><button data-i="${i}" class="rm">Eliminar</button></td>`;
+    tbody.appendChild(tr);
+  });
+  Array.from(document.getElementsByClassName('rm')).forEach(b => b.addEventListener('click', (e:any)=>{ inventory.splice(Number(e.target.dataset.i),1); save(); render(); }));
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const form = document.getElementById('inventoryForm') as HTMLFormElement | null;
+  if(form) form.addEventListener('submit', e=>{
+    e.preventDefault();
+    const nombre = (document.getElementById('nombre') as HTMLInputElement).value;
+    const descripcion = (document.getElementById('descripcion') as HTMLInputElement).value;
+    const precio = Number((document.getElementById('precio') as HTMLInputElement).value) || 0;
+    const existencia = Number((document.getElementById('existencia') as HTMLInputElement).value) || 0;
+    const ubicacion = (document.getElementById('ubicacion') as HTMLInputElement).value;
+    inventory.push({nombre, descripcion, precio, existencia, ubicacion});
+    save(); form.reset(); render();
+  });
+  render();
+});
