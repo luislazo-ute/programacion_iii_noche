@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>01 Hello DOM - Inventario (MP)</title>
+</head>
+<body>
+
+  <h2>01 Hello DOM - Inventario</h2>
+
+  <div id="inventoryApp">
+    <form id="inventoryForm">
+      <input id="nombre" placeholder="Nombre" required />
+      <input id="descripcion" placeholder="Descripción" />
+      <input id="precio" type="number" placeholder="Precio" />
+      <input id="existencia" type="number" placeholder="Existencia" />
+      <input id="ubicacion" placeholder="Ubicación" />
+      <button type="submit">Agregar</button>
+    </form>
+    <table border="1">
+      <thead><tr><th>Nombre</th><th>Descripción</th><th>Precio</th><th>Existencia</th><th>Ubicación</th><th>Acciones</th></tr></thead>
+      <tbody id="inventoryTable"></tbody>
+    </table>
+  </div>
+
+  <script src="01_hello_dom_mp.js"></script>
+</body>
+</html>
